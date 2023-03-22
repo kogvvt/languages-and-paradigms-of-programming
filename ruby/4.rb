@@ -1,12 +1,12 @@
 def square(a,b,c)
   delta = b**2 - 4*a*c
   if delta < 0
-    puts "Ujemna delta :("
+    puts "delta is less then 0"
   elsif delta == 0
     puts "Delta == 0"
-    puts "Miejsce zerowe w #{(Float((-b)) / Float((2*a))).round(2)}"
+    puts "Root of Delta == 0 equals : #{(Float((-b)) / Float((2*a))).round(2)}"
   else
-    puts "Miejsca zerowe w #{((Float(-b) + Float(delta**0.5)) / Float(2*a)).round(2)} i #{((Float(-b) - Float(delta**0.5)) / Float(2*a)).round(2)}"
+    puts "Root when Delta > 1 eqals : #{((Float(-b) + Float(delta**0.5)) / Float(2*a)).round(2)} and #{((Float(-b) - Float(delta**0.5)) / Float(2*a)).round(2)}"
   end
 end
 

@@ -9,7 +9,7 @@ end
 # puts power(7)
 # puts power(10)
 
-# argumenty wywolania programu (pisane po nawzwie pliku)
+# argumenty wywolania programu (pisane po nazwie pliku)
 input_arr = ARGV
 for i in input_arr do
   puts factorial(i.to_i)

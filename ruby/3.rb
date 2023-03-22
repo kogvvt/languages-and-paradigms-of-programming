@@ -1,29 +1,29 @@
-class Dzienniczek
+class ClassRegister
   def initialize
-    @matematyka = []
+    @math = []
   end
 
-  def dodajOceneZMajcy(ocena)
-    @matematyka.push(ocena)
+  def addGrade(grade)
+    @math.push(grade)
   end
 
-  def wyswietlOceny
-    for ocena in @matematyka do
-      print "#{ocena} "
+  def showGrades
+    for grade in @math do
+      print "#{grade} "
     end
     print "\n"
   end
 
-  def wyswietlSrednia
-    puts "Średnia z majcy: #{Float(@matematyka.sum) / Float(@matematyka.size)}"
+  def getAverage
+    puts "Average grade: #{Float(@math.sum) / Float(@math.size)}"
   end
 end
 
-dziennik = Dzienniczek.new
-dziennik.dodajOceneZMajcy(2)
-dziennik.dodajOceneZMajcy(5)
-dziennik.dodajOceneZMajcy(4)
-dziennik.dodajOceneZMajcy(1)
-dziennik.dodajOceneZMajcy(1)
-dziennik.wyswietlOceny
-dziennik.wyswietlSrednia
+classRegister = ClassRegister.new
+classRegister.addGrade(2)
+classRegister.addGrade(5)
+classRegister.addGrade(4)
+classRegister.addGrade(1)
+classRegister.addGrade(1)
+classRegister.showGrades
+classRegister.getAverage

@@ -1,37 +1,37 @@
 class Osoba
-  attr_accessor :imie, :ojciec
-  def initialize(imie, ojciec = nil)
-    @imie = imie
-    @ojciec = ojciec
+  attr_accessor :name, :father
+  def initialize(name, father = nil)
+    @name = name
+    @father = father
   end
 end
 
 class Drzewo
-  def initialize(korzen)
-    @korzen = korzen
+  def initialize(root)
+    @root = root
   end
 
-  def dodajSynow(osoba,synowie)
-    synowie.each do |syn|
-      syn.ojciec = osoba
+  def addSons(person,sons)
+    sons.each do |son|
+      son.father = person
     end
   end
 
-  def znajdzDziada(osoba)
-    if osoba.ojciec == nil
+  def findGrandparent(person)
+    if person.father == nil
       return nil
     end
-    return osoba.ojciec.ojciec.imie
+    return person.father.father.name
   end
 end
 
-pablo = Osoba.new("Pablo")
-michal = Osoba.new("Michal",pablo)
-maciek = Osoba.new("Maciek",pablo)
-jurek = Osoba.new("Jurek",michal)
+maciek = Osoba.new("Maciek")
+michal = Osoba.new("Michal",maciek)
+krzysztof = Osoba.new("Krzysztof",maciek)
+janusz = Osoba.new("Janusz",michal)
 
-drzewo = Drzewo.new(pablo)
-drzewo.dodajSynow(jurek,[Osoba.new("Kamil"),Osoba.new("Grzechu"),Osoba.new("Sławek")])
+tree = Drzewo.new(maciek)
+tree.addSons(piotrek,[Osoba.new("Kamil"),Osoba.new("Grzechu"),Osoba.new("Sławek")])
 
-dziad = drzewo.znajdzDziada(jurek)
-puts dziad
+grandpa = tree.findGrandparent(piotrek)
+puts grandpa

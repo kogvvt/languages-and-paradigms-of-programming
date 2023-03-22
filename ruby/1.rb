@@ -18,15 +18,15 @@ end
 print "\n"
 
 if l == 1
-  puts "WOW"
+  puts "It doesn't"
 elsif k == 0
-  puts "ALSO WOW"
+  puts "It does"
 else
-  puts "SADGE"
+  puts "Nah"
 end
 
 unless l != 0
-  puts "OMG"
+  puts "look at that!"
 end
 
 case k

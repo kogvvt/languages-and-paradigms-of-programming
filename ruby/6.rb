@@ -17,7 +17,7 @@ class Osoba
   end
 end
 
-pablo = Osoba.new("Pablo","Nowak")
-pablo.imie
-pablo.nazwisko
-pablo.to_s
+person = Osoba.new("Lorem","Ipsum")
+person.imie
+person.nazwisko
+person.to_s
